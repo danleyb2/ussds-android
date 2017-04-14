@@ -10,6 +10,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.crashlytics.android.Crashlytics;
 import com.nyaundibrian.ussds.Views.FixedSwipeRefreshLayout;
 import com.nyaundibrian.ussds.Views.listeners.EndlessRecyclerViewScrollListener;
 import com.nyaundibrian.ussds.adapters.CompaniesAdapter;
@@ -23,6 +24,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 
+import io.fabric.sdk.android.Fabric;
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 import okhttp3.Call;
@@ -58,6 +60,7 @@ public class CompanyListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_company_list);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

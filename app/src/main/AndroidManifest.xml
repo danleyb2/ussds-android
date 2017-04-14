@@ -55,6 +55,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.nyaundibrian.ussds.LoginActivity" />
         </activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="cf8488e9f987671a84191b6f482c853b4874bac1" />
     </application>
 
 </manifest>
