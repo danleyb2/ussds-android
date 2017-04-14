@@ -120,7 +120,7 @@ public class CompanyDetailFragment extends Fragment {
         recyclerView.setLayoutManager(mLayoutManager);
 
 
-        mAdapter = new CompanyUssdsAdapter(mCompany.getUssds());
+        mAdapter = new CompanyUssdsAdapter(mCompany.getUssds(),getActivity());
         recyclerView.setAdapter(mAdapter);
         /*
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
